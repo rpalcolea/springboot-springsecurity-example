@@ -1,4 +1,4 @@
 springboot-springsecurity-example
 =================================
 
-Example using Spring Boot with Spring Security with MongoDB as datastore. 
+Example of Spring Boot with Spring Security using MongoDB as datastore. 
