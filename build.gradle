@@ -32,6 +32,9 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
     compile("org.springframework.boot:spring-boot-starter-security")
     compile "org.springframework.boot:spring-boot-starter-data-mongodb"
+    compile "org.springframework:spring-messaging"
+    compile "org.springframework.boot:spring-boot-starter-websocket"
+    compile "com.google.guava:guava:18.0"
 }
 
 task wrapper(type: Wrapper) {
