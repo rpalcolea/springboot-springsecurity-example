@@ -44,7 +44,6 @@ class CustomAuthenticationProvider extends AbstractUserDetailsAuthenticationProv
         }
 
         if (!user.enabled ) {
-            logger.warn("Username {}: disabled", username);
             throw new BadCredentialsException("User disabled")
         }
 
