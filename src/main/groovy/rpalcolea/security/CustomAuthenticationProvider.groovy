@@ -30,22 +30,22 @@ class CustomAuthenticationProvider extends AbstractUserDetailsAuthenticationProv
         String password = (String) authentication.credentials
 
         if (!password) {
-            throw new BadCredentialsException("Password no provided, please try again");
+            throw new BadCredentialsException("Password no provided, please try again")
         }
 
         User user = userService.getByUsername(username)
 
         if (!user) {
-            throw new UsernameNotFoundException("Username doesn't exists");
+            throw new UsernameNotFoundException("Username doesn't exists")
         }
 
         if (!encoder.matches(password, user.password)) {
-            throw new BadCredentialsException("Invalid password, please try again");
+            throw new BadCredentialsException("Invalid password, please try again")
         }
 
         if (!user.enabled ) {
             logger.warn("Username {}: disabled", username);
-            throw new BadCredentialsException("User disabled");
+            throw new BadCredentialsException("User disabled")
         }
 
         final List<GrantedAuthority> authorities = (user.roles) ? AuthorityUtils.commaSeparatedStringToAuthorityList(user.roles.id.join(',')) : AuthorityUtils.NO_AUTHORITIES
