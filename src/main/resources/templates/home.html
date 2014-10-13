@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Spring boot security notification example</title>
+</head>
+<body>
+<h1>Welcome back!</h1>
+<form th:action="@{/logout}" method="post">
+      <div><input type="submit" value="Log out"/></div>
+</form>
+</body>
+</html>
